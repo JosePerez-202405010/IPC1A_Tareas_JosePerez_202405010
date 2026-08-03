@@ -18,7 +18,6 @@ public class Tarea2 {
         int cant = 0;
         boolean esValido = false;
 
-        // validasion de la cantidad de elementos para que no falle
         while (!esValido) {
             System.out.print("Ingrese el tamano del arreglo (entre 1 y 10): ");
             if (sc.hasNextInt()) {
@@ -30,13 +29,13 @@ public class Tarea2 {
                 }
             } else {
                 System.out.println("error no metio un numero entero valido");
-                sc.next(); // limpia el scanner si metio letras
+                sc.next();
             }
         }
 
         int[] vector = new int[cant];
+        double suma1D = 0;
 
-        // llenado del vector uno por uno
         for (int i = 0; i < cant; i++) {
             boolean numValido = false;
             while (!numValido) {
@@ -50,6 +49,27 @@ public class Tarea2 {
                 }
             }
         }
+
+        // aca calculamos el maximo minimo y el promedio
+        int max = vector[0];
+        int min = vector[0];
+
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] > max) {
+                max = vector[i];
+            }
+            if (vector[i] < min) {
+                min = vector[i];
+            }
+            suma1D = suma1D + vector[i];
+        }
+
+        promedio1D = suma1D / cant;
+
+        System.out.println("---- resultados 1d ----");
+        System.out.println("El numero mas grande es: " + max);
+        System.out.println("El numero mas pequeno es: " + min);
+        System.out.println("El promedio final es: " + promedio1D);
 
         sc.close();
     }
