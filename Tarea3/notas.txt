@@ -1,0 +1,8 @@
+Rebecca,100.0
+Zean,87.0
+Cristian,78.0
+Eduardo,76.0
+Diego Alx,67.0
+Tyloir,55.0
+Hagen,45.0
+Justin,65.0
